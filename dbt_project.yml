@@ -32,5 +32,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   mht_retail_dbt:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    silver:
+      +materialized: table
+      +schema: retail_silver
+      +tags:
+        - silver
+    gold:
       +materialized: view
+      +schema: retail_gold
+      +tags:
+        - gold

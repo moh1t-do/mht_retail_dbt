@@ -1,0 +1,13 @@
+mht_retail_dbt:
+  outputs:
+    dev:
+      account: "{{ env_var('ACCOUNT') }}"
+      database: "{{ env_var('DATABASE') }}"
+      password: "{{ env_var('PASSWORD') }}"
+      role: "{{ env_var('ROLE') }}"
+      schema: "{{ env_var('SCHEMA') }}"
+      threads: 4
+      type: snowflake
+      user: "{{ env_var('USER') }}"
+      warehouse: "{{ env_var('WAREHOUSE') }}"
+  target: dev
