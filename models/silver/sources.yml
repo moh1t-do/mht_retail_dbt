@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: retail_bronze       
+    database: retail_db          
+    schema: retail_bronze 
+    description: "Source tables from the Bronze layer of the Retail DB"      
+    tables:
+      - name: products 
+        description: "Contains all product information"
+      - name: sales
+        description: "Contains all sales transactions"
+      - name: sales_delta
+        description: "Contains all incremental sales transactions"
+      - name: stores
+        description: "Contains all store information"
